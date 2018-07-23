@@ -15,8 +15,7 @@ class AjaxDataController extends Controller
 
     public function getdata()
     {
-        $students =
-            Student::select('first_name', 'last_name');
+        $students = Student::select('first_name', 'last_name');
         return Datatables::of($students)->make(true);
     }
 }
